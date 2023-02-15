@@ -12,10 +12,9 @@ tasks:
       - task: optic
         vars:
           ARGS: >
-            diff
+            diff --web
             1.25_apis__apps__v1_openapi.json
             1.26_apis__apps__v1_openapi.json
-          CLI_ARGS: --web
 
   optic:
     cmds:
