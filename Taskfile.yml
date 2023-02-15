@@ -1,7 +1,22 @@
 version: "3"
 
+env:
+  OPTIC_TELEMETRY_LEVEL: off
+
 tasks:
+  npm:
+    - npm i
+
+  default:
+    cmds:
+      - task: optic
+        vars:
+          ARGS: >
+            diff
+            1.25_apis__apps__v1_openapi.json
+            1.26_apis__apps__v1_openapi.json
+          CLI_ARGS: --web
+
   optic:
     cmds:
-      - node_modules/.bin/optic {{.CLI_ARGS}}
-    silent: true
+      - node_modules/.bin/optic {{.ARGS}} {{.CLI_ARGS}}
