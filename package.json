@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@useoptic/optic": "^0.39.0"
+  }
+}

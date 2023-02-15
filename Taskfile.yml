@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  optic:
+    cmds:
+      - node_modules/.bin/optic {{.CLI_ARGS}}
+    silent: true
